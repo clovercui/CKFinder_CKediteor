@@ -5,18 +5,19 @@
 * 注意使用ckfinder图片上传配置路径 `ckfinder/config.php`  `66行`
 
   ```php
-  $config['backends'][] = array(
-    'name'         => 'default',
-    'adapter'      => 'local',
-    'baseUrl'      => '/uploads/', //这里配置实际上传的路径
-//  'root'         => '', // Can be used to explicitly set the CKFinder user files directory.
-    'chmodFiles'   => 0777,
-    'chmodFolders' => 0755,
-    'filesystemEncoding' => 'UTF-8',
-);
+      $config['backends'][] = array(
+        'name'         => 'default',
+        'adapter'      => 'local',
+        'baseUrl'      => '/uploads/', //这里配置实际上传的路径
+    //  'root'         => '', // Can be used to explicitly set the CKFinder user files directory.
+        'chmodFiles'   => 0777,
+        'chmodFolders' => 0755,
+        'filesystemEncoding' => 'UTF-8',
+    );
   ```
 
 * `路径：`ckeditor/config.js `配置`
+
 ```javascript
 /**
  * @license Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
