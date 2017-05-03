@@ -71,12 +71,12 @@ CKEDITOR.editorConfig = function( config ) {
 
     /*使用ckfinder上传图片 */
    
-    config.filebrowserBrowseUrl =  '/admin/ckfinder/ckfinder.html' ;    
-    config.filebrowserImageBrowseUrl =  '/admin/ckfinder/ckfinder.html?type=Images' ;    
-    config.filebrowserFlashBrowseUrl =  '/admin/ckfinder/ckfinder.html?type=Flash' ;    
-    config.filebrowserUploadUrl =  '/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files' ;    
-    config.filebrowserImageUploadUrl =  '/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images' ;    
-    config.filebrowserFlashUploadUrl =  '/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash' ; 
+    config.filebrowserBrowseUrl =  '/ckfinder/ckfinder.html' ;    
+    config.filebrowserImageBrowseUrl =  '/ckfinder/ckfinder.html?type=Images' ;    
+    config.filebrowserFlashBrowseUrl =  '/ckfinder/ckfinder.html?type=Flash' ;    
+    config.filebrowserUploadUrl =  '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files' ;    
+    config.filebrowserImageUploadUrl =  '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images' ;    
+    config.filebrowserFlashUploadUrl =  '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash' ; 
 
 
 
