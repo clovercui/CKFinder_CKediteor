@@ -1,0 +1,58 @@
+<!--
+    @authors Clover (clover_cui@163.com)
+    @date    2017-05-03 16:45:01  
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ck 富文本编辑器（已破解）</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <!--css引入区-->
+    <link href="" rel="stylesheet">
+    <!--js引入区-->
+    <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="ckfinder/ckfinder.js"></script>
+
+<script type="text/javascript">
+    window.onload = function()
+    {
+        CKEDITOR.replace( 'testEditor',{height:300});
+    }
+
+</script>
+ <script>
+
+         function openModal() {
+             CKFinder.modal( {
+                 chooseFiles: true,
+                 basePath:'/admin/uploads/',
+                 onInit: function( finder ) {
+                     finder.on( 'files:choose', function( evt ) {
+                         var file = evt.data.files.first();
+                         document.getElementById( 'url' ).value = file.getUrl();
+                            $("#imgthm").html("<img src='"+file.getUrl()+"' width='100px' height='100px'/>");
+                     } );
+                     finder.on( 'file:choose:resizedImage', function( evt ) {
+                         document.getElementById( 'url' ).value = evt.data.resizedUrl;
+                         $("#imgthm").html("<img src='"+evt.data.resizedUrl+"' width='100px' height='100px'/>");
+                     } );
+                 }
+             } );
+         }
+     </script>
+
+
+    </head>
+    <body>
+    <h1 style="color: red">需要PHP环境</h1>
+        <h1>富文本编辑器演示</h1>
+        <div id="testEditor" style="width:100%;height: 300px"></div>
+         <h1>文件上传演示</h1>
+        <input type="text" size="48" name="url" id="url" /> <button onclick="openModal()">Select file</button>
+        <div id="imgthm"></div>
+    </body>
+</html>
